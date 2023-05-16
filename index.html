@@ -22,7 +22,7 @@
 
         </form>
 
-        <p>Ola <span id="campo"></span>!</p>
+        <p id="campo"></p>
 
     </main>
     <footer></footer>
@@ -39,8 +39,8 @@
             const sobrenome = form.sobrenome.value;
             const idade = Number(form.idade.value);
             const nomeCompleto = `${nome} ${sobrenome}, ${idade} anos`;
-            campo.textContent = nomeCompleto;
             console.log(nomeCompleto);
+            campo.textContent =`Olá ${nomeCompleto}!`;
         }
 
     </script>
