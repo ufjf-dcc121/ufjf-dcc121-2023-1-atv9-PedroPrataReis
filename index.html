@@ -5,9 +5,20 @@
     <title>Semana 9: Forms</title>
 
     <style>
-        span{
+        #campo>span{
+            color: purple;
+        }
+
+        .nome{
             color: red;
         }
+        .sobrenome{
+            color: green;
+        }
+        .idade{
+            color: blue;
+        }
+
 
     </style>
 </head>
@@ -58,9 +69,33 @@
             form.reset();
             form.nome.focus();
 
+            adicionaPessoa(nome, sobrenome, idade);
+
+            
+        }
+
+        function adicionaPessoa(nome, sobrenome, idade){
             const li = document.createElement('li');
-            li.textContent = nomeCompleto;
-            console.log(li);
+            const divPessoa = document.createElement('div');
+            divPessoa.classList.add("pessoa");
+
+            const spanNome = document.createElement('span');
+            spanNome.classList.add('nome');
+            spanNome.textContent = nome;
+            divPessoa.appendChild(spanNome);
+
+            const spanSobrenome = document.createElement('span');
+            spanSobrenome.classList.add('sobrenome');
+            spanSobrenome.textContent = sobrenome;
+            divPessoa.appendChild(spanSobrenome);
+
+            const spanIdade = document.createElement('span');
+            spanIdade.classList.add('idade');
+            spanIdade.textContent = idade;
+            divPessoa.appendChild(spanIdade);
+
+
+            li.appendChild(divPessoa);
             ol.appendChild(li);
         }
 
