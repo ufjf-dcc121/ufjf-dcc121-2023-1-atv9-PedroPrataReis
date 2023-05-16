@@ -29,10 +29,9 @@
         const form = document.querySelectorAll("form");
         form.addEventListener("submit", aoEnviar);
 
-        function aoEnviar(){
-
+        function aoEnviar(evento){
+            evento.preventDefault();
             console.log("Hello, form!");
-
         }
 
     </script>
