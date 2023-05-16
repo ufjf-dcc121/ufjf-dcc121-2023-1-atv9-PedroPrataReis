@@ -42,12 +42,17 @@
         function aoEnviar(evento){
             evento.preventDefault();
             console.log("Hello, form!");
+
             const nome = form.nome.value;
             const sobrenome = form.sobrenome.value;
             const idade = Number(form.idade.value);
+
             const nomeCompleto = `${nome} ${sobrenome}, ${idade} anos`;
             console.log(nomeCompleto);
             campo.innerHTML =`Olá <span>${nomeCompleto}</span>!`;
+
+            form.reset();
+            form.nome.focus();
         }
 
     </script>
