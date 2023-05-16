@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Semana 9: Forms</title>
+
+    <style>
+        span{
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -40,7 +47,7 @@
             const idade = Number(form.idade.value);
             const nomeCompleto = `${nome} ${sobrenome}, ${idade} anos`;
             console.log(nomeCompleto);
-            campo.textContent =`Olá ${nomeCompleto}!`;
+            campo.innerHTML =`Olá <span>${nomeCompleto}</span>!`;
         }
 
     </script>
