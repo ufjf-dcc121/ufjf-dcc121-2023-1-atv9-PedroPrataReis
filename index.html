@@ -15,18 +15,25 @@
         <form action="">
 
             <input type="text" name="nome"/>
-            <input type="text" name="sobrenome"/>
-            <input type="text" name="idade"/>
+            <input type="text" name="sobrenome"/><br/>
+            <input type="text" name="idade"/><br/><br/>
             <input type="submit"/>
             <input type="reset"/>
 
         </form>
 
     </main>
-    <footer>
+    <footer></footer>
+    <script>
 
+        const form = document.querySelectorAll("form");
+        form.addEventListener("submit", aoEnviar);
 
+        function aoEnviar({
+            
+            console.log("Hello, form!");
+        }
 
-    </footer>
+    </script>
 </body>
 </html>
