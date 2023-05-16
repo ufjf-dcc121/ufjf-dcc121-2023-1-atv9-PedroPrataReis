@@ -22,13 +22,14 @@
 
         </form>
 
-        
+        <p>Ola <span id="campo"></span>!</p>
 
     </main>
     <footer></footer>
     <script>
 
         const form = document.querySelector("form");
+        const campo = document.querySelector("#campo");
         form.addEventListener("submit", aoEnviar);
 
         function aoEnviar(evento){
@@ -38,6 +39,7 @@
             const sobrenome = form.sobrenome.value;
             const idade = Number(form.idade.value);
             const nomeCompleto = `${nome} ${sobrenome}, ${idade} anos`;
+            campo.textContent = nomeCompleto;
             console.log(nomeCompleto);
         }
 
